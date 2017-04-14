@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+Copyright 2017 Max Schuster.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<html>
+    <head>
+        <title>DemoUILayout</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    <vaadin-vertical-layout>
+        <vaadin-panel caption="ColorConverters – Demo" icon="fonticon://Vaadin-Icons/e667" width-auto :center>
+            <vaadin-vertical-layout margin>
+                <vaadin-form-layout margin="false">
+                    <vaadin-text-field _id="dtoValue" caption="DTO value:" readOnly="true" />
+                    <vaadin-css-layout caption="Color picker:">
+                        <vaadin-color-picker _id="colorPicker" caption="Choose color" />
+                    </vaadin-css-layout>
+                    <vaadin-text-field _id="rgb" caption="RGB:" />
+                    <vaadin-text-field _id="rgba" caption="RGBA:" />
+                    <vaadin-text-field _id="hex" caption="HEX:" />
+                </vaadin-form-layout>
+                <vaadin-horizontal-layout margin="false" :right>
+                    <vaadin-button _id="validate" style-name="" icon="fonticon://Vaadin-Icons/e910">
+                        Validate
+                    </vaadin-button>
+                    <vaadin-button _id="clear" style-name="danger" icon="fonticon://Vaadin-Icons/e69a">
+                        Clear
+                    </vaadin-button>
+                </vaadin-horizontal-layout>
+            </vaadin-vertical-layout>
+        </vaadin-panel>
+    </vaadin-vertical-layout>
+    </body>
+</html>
